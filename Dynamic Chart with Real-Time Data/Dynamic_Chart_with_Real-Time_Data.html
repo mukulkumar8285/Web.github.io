@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Line Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
+</head>
+<body>
+    <style>
+        div{
+            width: 700px;
+            height: 700px;
+            margin: auto;
+        }
+    </style>
+    <div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+        // Initial data
+        let initialData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            datasets: [{
+                label: 'Live Updating Tension',
+                data: [65, 59, 80, 81, 26, 55, 40],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: initialData,
+            options: {
+                animations: {
+                    tension: {
+                        duration: 1000,
+                        easing: 'linear',
+                        from: 1,
+                        to: 0,
+                        loop: true
+                    }
+                },
+                scales: {
+                    y: {
+                        min: 0,
+                        max: 100
+                    }
+                }
+            }
+        };
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, config);
+
+        // Function to update chart data
+        function updateChartData() {
+            // Simulate new data
+            const newData = {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Live Updating Tension',
+                    data: Array.from({ length: 7 }, () => Math.floor(Math.random() * 100)),
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                }]
+            };
+
+            // Update chart data
+            myChart.data = newData;
+            myChart.update();
+        }
+
+      
+        // Update data every 3 seconds (adjust as needed)
+       setInterval(updateChartData, 3000);
+    </script>
+</body>
+</html>

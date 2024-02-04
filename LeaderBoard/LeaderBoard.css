@@ -1,0 +1,52 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    
+}
+#player-list {
+    list-style: none;
+    
+    width: 700px;
+    height: 125px;
+    border: none;
+    padding: 0;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#player-list li {
+    justify-content: center;
+    height: 125px;
+    padding-top: 50px;
+
+}
+
+#player-list li span {
+    margin-right: 120px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+input {
+    text-transform: uppercase;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    width: 150px;
+}
+body{
+    text-align: center;
+ 
+    background-color: orange;
+}
+#button{
+    width: 150px;
+    background-color: lightgreen;
+    border: 1px solid lightgreen;
+}
+h1{
+    text-decoration-line: underline;
+}

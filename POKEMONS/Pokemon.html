@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div id="data_Display">
+
+        </div>
+    </div>
+
+    <script>
+
+        var store_Data = [];
+
+        async function Display_image() {
+            const nums = 151;
+
+            for (let i = 1; i <= nums; i++) {
+
+                const data_Display = await import_image(`https://pokeapi.co/api/v2/pokemon/${i}`);
+
+                store_Data.push(data_Display);
+            }
+            return store_Data;
+
+        }
+
+        async function import_image(url) {
+            const response = await fetch(url);
+
+            const image_find = await response.json();
+
+            const div_date = {
+                name: image_find.name,
+                front_image: image_find.sprites.front_default,
+                type: image_find.types.map(element => element.type.name),
+                back_image: image_find.sprites.back_default,
+                ablities: image_find.abilities.map(element => element.ability.name)
+
+
+            }
+            return div_date;
+        }
+
+
+        async function Display_Data() {
+            const Store_data = await Display_image();
+
+            const Div_outer = document.createElement("div");
+
+            Store_data.forEach(element => {
+
+                const Div_inner = document.createElement("div");
+
+                const image_Display = document.createElement("img");
+
+                image_Display.src = element.front_image;
+
+                Div_inner.appendChild(image_Display);
+
+
+                const Text_Data = document.createElement("p");
+                Text_Data.textContent = element.type.join(' , ');
+                Div_inner.appendChild(Text_Data);
+
+                const name_Data = document.createElement("p");
+                name_Data.textContent = element.name;
+                Div_inner.appendChild(name_Data);
+
+                const back_image1 = document.createElement("img");
+                back_image1.src = element.back_image;
+                Div_inner.appendChild(back_image1);
+
+                const abilities1 = document.createElement("p");
+                abilities1.textContent = element.ablities.join(' , ');
+
+                Div_inner.appendChild(abilities1);
+
+                Div_outer.appendChild(Div_inner);
+
+                
+            });
+
+           
+
+            document.body.appendChild(Div_outer);
+
+        }
+        Display_Data();
+
+    </script>
+
+</body>
+
+</html>

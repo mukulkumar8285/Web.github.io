@@ -1,0 +1,49 @@
+#button{
+    border-radius: 30%;
+    height: 2rem;
+    width: 2rem;
+    background-color: burlywood;
+    animation: change 5s infinite ;
+}
+body{
+    /* background-color: black; */
+    text-align: center;
+    
+}
+.main{
+    margin-top: 15%;
+}
+#number{
+    height: 2rem;
+    border-radius: 30px;
+    text-align: center;
+    background-color: orange;
+}
+#Submit{
+    background-color: burlywood;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#result{
+    margin-top: 10px;
+
+}
+@keyframes change{
+    0%{
+        background-color: aqua;
+    }
+    25%{
+        background-color: orange;
+    }
+    50%{
+        background-color: red;
+    }
+    75%{
+        background-color: greenyellow;
+    }
+    100%{
+        background-color: pink;
+    }
+  }

@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+    width: 50%;
+    height: 100vh;
+    background-color: #D1DCE7;
+   text-align: center;
+   
+}

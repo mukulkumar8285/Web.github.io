@@ -1,0 +1,43 @@
+body{
+    margin-top: 200px;
+}
+.radius{
+    width: 150px;
+    height: 150px;
+    background-color:deeppink;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+#button1{
+    text-align: center;
+    margin: 20px;
+}
+#button2{
+    text-align: center;
+}
+#shapeBox{
+        background-color: rgb(16, 221, 95);
+        position: relative;
+        margin: auto;
+        top: 25%;
+        width: 80px;
+        height: 80px;
+     
+     
+}
+
+.rectangle {
+    border-radius: 0;
+}
+
+.rounded {
+    border-radius: 10px;
+ 
+}
+
+.circle {
+    border-radius: 50%;
+}
+

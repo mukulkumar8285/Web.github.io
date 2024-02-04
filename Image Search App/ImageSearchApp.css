@@ -1,0 +1,102 @@
+#result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+#Dec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+}
+
+img {
+    width: 350px;
+    height: 200px;
+
+
+    object-fit: cover;
+    transition: box-shadow 0.3s ease;
+    /* Adding transition for a smoother effect */
+}
+
+/* Adjusted box-shadow during hover */
+
+/* img:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    object-fit: cover;
+} */
+
+.name {
+    text-align: center;
+}
+
+#input {
+    padding: 15px;
+    width: 450px;
+    border-radius: 10px;
+    border: none;
+    text-transform: uppercase;
+    background: linear-gradient(to right, lightcyan 60.6%, lightpink 50%);
+    margin-bottom: 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 17px;
+    background-color: lightpink;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(to right, lightpink 50%, lightcyan 50%);
+}
+
+.description {
+    width: 347px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 800;
+   color: black;
+}
+
+body {
+    background: linear-gradient(to right, lightpink 50%, lightcyan 50%);
+    text-align: center;
+    padding-top: 50px;
+    align-items: center;
+   
+    justify-content: center;
+}
+
+h1 {
+   width:  409px;
+   border-radius: 10px;
+   margin: 20px auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    font-family: "Lucida Console", "Courier New", monospace;
+   
+}

@@ -1,0 +1,10 @@
+let Dom = document.getElementById("Dom");
+// console.log("mukul");
+Dom.style.backgroundColor="yellow";
+Dom.style.height="200px";
+Dom.style.width="300px";
+Dom.style.padding="10px";
+Dom.style.margin="20px";
+Dom.style.fontWeight="700";
+Dom.style.fontSize="18px";
+Dom.style.color="blue";
